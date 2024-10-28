@@ -1,0 +1,416 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+/* head portion of the website */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-con {
+    position: relative;
+    bottom: 100px;
+    left: 90px;
+    transform: translate(-50px);
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 5px solid white;
+    overflow: hidden;
+    background-color: white;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.banner-infocon {
+    position: relative;
+    padding: 20px;
+    padding-left: 50px;
+    padding-bottom: 40px;
+    bottom: 120px;
+}
+
+/* Contact Icons */
+
+.icon-main {
+    text-align: right;
+}
+
+.icon-main a {
+    text-decoration: none;
+}
+
+.icon-main a {
+    position: relative;
+    bottom: 330px;
+    padding: 10px;
+}
+
+#btnh {
+    padding: 3px;
+    padding-top: 0.5px;
+    padding-bottom: 0.5px;
+}
+
+#btnh:hover {
+    font-size: 60px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
+}
+
+.expsection {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    bottom: 170px;
+    padding-bottom: 20px;
+}
+
+.infotile {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
+    width: 70%;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+}
+
+.headtile {
+    width: 30%;
+}
+
+.bodytile {
+    display: flex;
+}
+
+.infotile h1 {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.infotile img {
+    width: 55%;
+    margin-left: 20%;
+    height: auto;
+}
+
+.infotile p {
+
+    padding: 10px;
+    text-align: left;
+    display: inline;
+}
+
+/* PROJECT AREA */
+.projecint {
+    width: 70%;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+    perspective: 1000px;
+}
+
+.intsing {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
+    width: 70px;
+    padding: 10px;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+}
+
+.dintrest li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: rotateX(25deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prodetls li {
+    list-style: none;
+    padding: 0;
+}
+
+.prosection {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    bottom: 170px;
+    padding-bottom: 20px;
+}
+
+.projectheading {
+    width: 70%;
+    font-weight: 500;
+    font-size: 25px;
+    padding-left: 10px;
+    padding-top: 30px;
+}
+
+.prodetls {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
+    width: 70%;
+    padding: 10px;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+}
+
+.prodetls h1 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 9px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.details p {
+    font-weight: 500;
+    font-size: 15px;
+    color: #555;
+}
+
+.details i {
+    font-size: 50px;
+}
+
+.inthead {
+    width: 70%;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.interestpage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    bottom: 170px;
+}
+
+.intinfo {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
+    width: 70%;
+    padding: 0;
+    padding-top: 0;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+}
+
+.intinfo ul {
+    list-style: none;
+}
+
+.intinfo li {
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.certficateinfo {
+    display: flex;
+    align-items: center;
+}
+
+#certif {
+    width: 60%;
+    padding: 6px;
+}
+
+#certif img {
+    width: 100px;
+    padding-top: 20px;
+}
+
+.certficateinfo p {
+    width: 60%;
+    padding: 10px;
+    padding-left: 10px;
+    margin: 10PX;
+}
+
+.certficateinfo img {
+    padding: 10px;
+    width: 30%;
+    height: auto;
+}
+
+#cerline {
+    position: relative;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 20px;
+    bottom: 170px;
+}
+
+.foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 100px;
+    text-align: center;
+    gap: 10px;
+}
+
+.topbtn {
+    padding: 10px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
+}
+
+.topbtn:hover {
+    font-size: 17px;
+}
+
+@media all and (max-width: 500px) {
+    .banner {
+        height: 150PX;
+    }
+
+    .profile-con {
+        bottom: 70px;
+        left: 70px;
+        width: 160px;
+        height: 160px;
+    }
+
+    .banner-infocon {
+        position: relative;
+        padding-left: 20px;
+        bottom: 90px;
+    }
+
+    .icon-main {
+        padding-right: 5px;
+    }
+
+    .icon-main a {
+        bottom: 300px;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .expsection {
+        bottom: 140px;
+    }
+
+    .headtile {
+        width: 90%;
+    }
+
+    .infotile {
+        width: 90%;
+    }
+
+    .infotile h1 {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .infotile img {
+        padding: 0;
+        margin: 0;
+        padding-top: 10px;
+        width: 80%;
+    }
+
+    .projectheading {
+        width: 87%;
+        padding-top: 40px;
+        padding-left: 0;
+    }
+
+    .prodetls {
+        width: 90%;
+    }
+
+    #certif {
+        width: 20%;
+    }
+
+    #certif img {
+        width: 50px;
+        padding-top: 20px;
+    }
+
+    .certficateinfo {
+        display: grid;
+    }
+
+    .certficateinfo p {
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .certficateinfo img {
+        padding: 20;
+        margin-left: 60%;
+        width: 110px;
+    }
+
+
+    .icon-main a {
+        margin: 0;
+        padding: 1.5px;
+    }
+
+    #btnh:hover {
+        font-size: 47px;
+    }
+
+}
