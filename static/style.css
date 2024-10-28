@@ -413,6 +413,10 @@ body {
         font-size:35px;
         padding: 0px;
     }
+
+    #contactbtn{
+        display: none;
+    }
 /*
     #btnh:hover {
         font-size: 47px;
