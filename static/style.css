@@ -410,12 +410,12 @@ body {
     }
 
     #btnh{
-        font-size:50px;
+        font-size:35px;
         padding: 0px;
     }
-
+/*
     #btnh:hover {
         font-size: 47px;
-    }
+    }*/
 
 }
