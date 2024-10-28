@@ -409,6 +409,10 @@ body {
         padding: 1.5px;
     }
 
+    #btnh{
+        font-size:20px;
+    }
+
     #btnh:hover {
         font-size: 47px;
     }
