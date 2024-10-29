@@ -407,4 +407,8 @@ body {
         padding: 1.5px;
     }
 
+    .icon-main a i {
+        font-size: 1em; /* Change to smaller size for mobile */
+    }
+
 }
