@@ -405,9 +405,7 @@ body {
     .icon-main a {
         margin: 0;
         padding: 1.5px;
+        font-size: 10px;
     }
 
-    #btnh{
-        font-size: 5px;
-    }
 }
