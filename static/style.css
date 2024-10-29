@@ -83,14 +83,6 @@ body {
     box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
 }
 
-#btnh::after{
-    font-size: 40px;
-}
-
-#contactbtn{
-    padding-right: 20px;
-}
-
 .expsection {
     position: relative;
     display: flex;
@@ -348,7 +340,7 @@ body {
     }
 
     .icon-main a {
-        bottom: 345px;
+        bottom: 346px;
         padding: 5px;
         font-size: 0.8rem;
     }
@@ -422,9 +414,13 @@ body {
         padding: 0px;
     }
 
-    #contactbtn{
-        display: none;
+    #btnh::after{
+        font-size: 40px;
     }
+
+    /*#contactbtn{
+        display: none;
+    }*/
 /*
     #btnh:hover {
         font-size: 47px;
