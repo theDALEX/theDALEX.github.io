@@ -342,6 +342,7 @@ body {
     .icon-main a {
         bottom: 346px;
         padding: 5px;
+        font-size: 0.8rem;
     }
 
     .expsection {
