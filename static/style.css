@@ -404,11 +404,11 @@ body {
 
     .icon-main a {
         margin: 0;
-        padding: 1.5px;
+        padding: 1px;
     }
 
     #btnh{
-        font-size: 3em;
+        font-size: 2.5em;
         padding: 0;
         margin: 0;
     }
@@ -420,7 +420,7 @@ body {
         box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
     }
     #btnh::after {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
 }
