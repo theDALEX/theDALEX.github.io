@@ -408,19 +408,19 @@ body {
     }
 
     #btnh{
-        font-size: 2em;
+        font-size: 1em;
         padding: 0;
         margin: 0;
     }
     #btnh:hover {
-        font-size: 2.5em;
+        font-size: 1.5em;
         background-color: white;
         border: 1px solid #ddd;
         border-radius: 8px;
         box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
     }
     #btnh::after {
-        font-size: 2em;
+        font-size: 1em;
     }
 
 }
