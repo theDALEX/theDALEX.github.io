@@ -408,13 +408,13 @@ body {
     }
 
     #btnh {
-        font-size: 40px;
+        font-size: 35px;
         padding: 0;
         margin: 0;
     }
 
     #btnh:hover {
-        font-size: 45px;
+        font-size: 37px;
         background-color: white;
         border: 1px solid #ddd;
         border-radius: 4px;
@@ -422,7 +422,7 @@ body {
     }
 
     #btnh::after {
-        font-size: 40px;
+        font-size: 35px;
     }
     
 }
