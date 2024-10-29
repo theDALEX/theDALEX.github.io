@@ -342,7 +342,7 @@ body {
     .icon-main a {
         bottom: 346px;
         padding: 5px;
-        font-size: 0.3rem;
+        font-size: 0.5rem;
     }
 
     .expsection {
@@ -407,6 +407,10 @@ body {
     .icon-main a {
         margin: 0;
         padding: 1.5px;
+    }
+
+    #btnh{
+        font-size: 2px
     }
 
 }
