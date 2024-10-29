@@ -409,6 +409,7 @@ body {
 
     #btnh{
         font-size: 2em;
+        padding: 0;
     }
     #btnh:hover {
         font-size: 2.9m;
