@@ -404,17 +404,17 @@ body {
 
     .icon-main a {
         margin: 0;
-        padding: 1px;
+        padding: 1.5px;
     }
 
     #btnh {
-        font-size: 30px;
+        font-size: 40px;
         padding: 0;
         margin: 0;
     }
 
     #btnh:hover {
-        font-size: 35px;
+        font-size: 45px;
         background-color: white;
         border: 1px solid #ddd;
         border-radius: 4px;
@@ -422,7 +422,7 @@ body {
     }
 
     #btnh::after {
-        font-size: 30px;
+        font-size: 40px;
     }
 
 }
