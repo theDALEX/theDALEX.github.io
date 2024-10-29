@@ -87,6 +87,10 @@ body {
     font-size: 40px;
 }
 
+#contactbtn{
+    padding-right: 20px;
+}
+
 .expsection {
     position: relative;
     display: flex;
