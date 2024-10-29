@@ -83,6 +83,10 @@ body {
     box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
 }
 
+#btnh::after{
+    font-size: 40px;
+}
+
 .expsection {
     position: relative;
     display: flex;
@@ -340,7 +344,7 @@ body {
     }
 
     .icon-main a {
-        bottom: 347px;
+        bottom: 345px;
         padding: 5px;
         font-size: 0.8rem;
     }
