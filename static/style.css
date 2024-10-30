@@ -408,6 +408,10 @@ body {
         font-size: 39px;
         padding: 0;
         margin: 0;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
     }
 
     #btnh:hover {
