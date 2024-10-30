@@ -120,9 +120,10 @@ body {
 }
 
 .infotile img {
-    width: 55%;
+    width: 60%;
     margin-left: 20%;
     height: auto;
+    flex-shrink: 0;
 }
 
 .infotile p {
@@ -258,40 +259,32 @@ body {
     padding-left: 10px;
 }
 
-.certficateinfo {
+.boxercer {
+    position: relative;
     display: flex;
-    align-items: center;
-}
-
-#certif {
-    width: 60%;
-    padding: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+    bottom: 170px;
+    padding-bottom: 20px;
 }
 
 #certif img {
-    width: 100px;
-    padding-top: 20px;
-}
-
-.certficateinfo p {
-    width: 60%;
-    padding: 10px;
-    padding-left: 10px;
-    margin: 10PX;
-}
-
-.certficateinfo img {
-    padding: 10px;
-    width: 30%;
+    margin: 10px;
+    width: 60px;
     height: auto;
 }
 
-#cerline {
-    position: relative;
+.certficateinfo {
     display: flex;
-    justify-self: center;
-    margin-bottom: 20px;
-    bottom: 170px;
+    flex-direction: column;
+    align-items: start;
+}
+
+.certficateinfo img {
+    width: 150px;
+    height: auto;
+    flex-shrink: 0;
+    align-self: flex-end;
 }
 
 .foot {
