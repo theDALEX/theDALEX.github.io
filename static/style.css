@@ -141,6 +141,34 @@ body {
     border-color: var(--accent-color);
 }
 
+/* to gridx web page */
+.info-banner {
+    display: block;
+    background-color: #f4f6fc;
+    border-left: 5px solid #007bff;
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.info-banner:hover {
+    background-color: #e9f2ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.15);
+}
+
+.info-banner .highlight {
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
 /* Experience and Education Section */
 .expsection {
     position: relative;
@@ -403,10 +431,12 @@ body {
 
 /* Responsive Design */
 @media all and (max-width: 992px) {
-    .infotile, .prodetls {
+
+    .infotile,
+    .prodetls {
         width: 85%;
     }
-    
+
     .icon-main {
         padding-right: 10px;
         gap: 10px;
@@ -417,7 +447,7 @@ body {
     .banner {
         height: 200px;
     }
-    
+
     .profile-con {
         left: 50%;
         transform: translateX(-50%);
@@ -425,26 +455,26 @@ body {
         width: 180px;
         height: 180px;
     }
-    
+
     .profile-con:hover {
         transform: translateX(-50%) translateY(-10px);
     }
-    
+
     .banner-infocon {
         text-align: center;
         padding: 20px;
         bottom: 80px;
     }
-    
+
     .name {
         font-size: 24px;
     }
-    
+
     .quote {
         font-size: 14px;
         max-width: 100%;
     }
-    
+
     .icon-main {
         justify-content: center;
         position: relative;
@@ -452,21 +482,22 @@ body {
         padding: 10px 0;
         gap: 12px;
     }
-    
+
     #btnh {
         font-size: 36px;
         padding: 6px;
     }
-    
+
     .expsection {
         bottom: 60px;
     }
-    
-    .infotile, .prodetls {
+
+    .infotile,
+    .prodetls {
         width: 90%;
         flex-direction: column;
     }
-    
+
     .headtile {
         width: 100%;
         margin-bottom: 15px;
@@ -474,32 +505,32 @@ body {
         align-items: center;
         justify-content: space-between;
     }
-    
+
     .headtile h1 {
         width: auto;
         padding-bottom: 0;
     }
-    
+
     .headtile img {
         width: 80px;
         margin-left: 0;
     }
-    
+
     .projectheading {
         width: 90%;
         font-size: 24px;
         text-align: center;
         padding-left: 0;
     }
-    
+
     .prosection {
         bottom: 60px;
     }
-    
+
     .boxercer {
         bottom: 60px;
     }
-    
+
     #certif {
         width: 100%;
         display: flex;
@@ -507,11 +538,11 @@ body {
         justify-content: space-between;
         margin-bottom: 15px;
     }
-    
+
     .certficateinfo {
         width: 100%;
     }
-    
+
     .foot {
         bottom: 40px;
         padding: 20px;
@@ -533,11 +564,11 @@ body {
         bottom: 60px;
         padding: 15px;
     }
-    
+
     .name {
         font-size: 22px;
     }
-    
+
     .quote {
         font-size: 13px;
     }
@@ -553,62 +584,68 @@ body {
         padding: 5px;
     }
 
-    .expsection, .prosection, .boxercer {
+    .expsection,
+    .prosection,
+    .boxercer {
         bottom: 40px;
         padding-bottom: 20px;
         gap: 15px;
     }
-    
-    .infotile, .prodetls {
+
+    .infotile,
+    .prodetls {
         padding: 15px;
     }
-    
-    .infotile h1, .prodetls h1 {
+
+    .infotile h1,
+    .prodetls h1 {
         font-size: 16px;
     }
-    
-    .infotile p, .prodetls p, .certficateinfo p {
+
+    .infotile p,
+    .prodetls p,
+    .certficateinfo p {
         font-size: 14px;
         padding: 5px;
     }
-    
+
     .details {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
     }
-    
+
     .ts {
         font-size: 12px;
         padding: 5px 8px;
     }
-    
+
     .details i {
         font-size: 24px;
         align-self: flex-end;
     }
-    
+
     .certficateinfo {
         display: flex;
         flex-direction: column;
     }
-    
+
     .certficateinfo img {
         width: 100px;
         margin: 10px auto;
         align-self: center;
     }
-    
+
     .foot {
         bottom: 20px;
         padding: 15px;
         gap: 8px;
     }
-    
+
     .foot p {
         font-size: 14px;
     }
-    
+
     .topbtn {
         padding: 8px 15px;
         font-size: 14px;
@@ -620,49 +657,51 @@ body {
     .banner {
         height: 120px;
     }
-    
+
     .profile-con {
         width: 120px;
         height: 120px;
         bottom: 50px;
     }
-    
+
     .banner-infocon {
         bottom: 50px;
     }
-    
+
     .name {
         font-size: 20px;
     }
-    
+
     .quote {
         font-size: 12px;
     }
-    
+
     .icon-main {
         bottom: 30px;
     }
-    
+
     #btnh {
         font-size: 24px;
     }
-    
+
     .headtile img {
         width: 60px;
     }
-    
-    .expsection, .prosection, .boxercer {
+
+    .expsection,
+    .prosection,
+    .boxercer {
         bottom: 30px;
     }
-    
+
     .projectheading {
         font-size: 20px;
     }
-    
+
     .certficateinfo img {
         width: 80px;
     }
-    
+
     .foot {
         bottom: 15px;
     }
