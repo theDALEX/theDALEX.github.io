@@ -144,12 +144,12 @@ body {
 /* to gridx web page */
 .info-banner {
     display: block;
-    background-color: #f4f6fc;
-    border-left: 5px solid #007bff;
+    background: linear-gradient(to right, #982fe3, #ff007f, #0044ff);
+    /* Gradient from dark purple to pink to blue */
+    color: white;
     padding: 1rem 1.5rem;
     margin-top: 1.5rem;
     border-radius: 12px;
-    color: #333;
     text-decoration: none;
     font-size: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
@@ -157,15 +157,8 @@ body {
 }
 
 .info-banner:hover {
-    background-color: #e9f2ff;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 123, 255, 0.15);
-}
-
-.info-banner .highlight {
-    color: #007bff;
-    font-weight: 600;
-    text-decoration: underline;
 }
 
 
@@ -650,6 +643,10 @@ body {
         padding: 8px 15px;
         font-size: 14px;
     }
+
+    .info-banner {
+        width: 90%;
+    }
 }
 
 /* Small mobile devices */
@@ -705,4 +702,6 @@ body {
     .foot {
         bottom: 15px;
     }
+
+
 }
