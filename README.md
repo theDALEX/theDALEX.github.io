@@ -1,3 +1,3 @@
-# Dalex Davis Portfolio Website
+# Dalex Davis Website
 
 This is my digital book documenting my ideas, experiences, and whatever I’m up to.
