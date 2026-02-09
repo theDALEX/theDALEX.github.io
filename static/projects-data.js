@@ -6,8 +6,7 @@ const projectsData = [
         description: "Our product was Ally, a partner app for Ukind charity for there VR headsets. This is the presentation that advanced to the final round representing Manchester.",
         category: "video",
         featured: true,
-        videoUrl: "/videos/AWS_hackathon_files/AWS_hackathon.mp4",
-        videoPoster: "/videos/AWS_hackathon_files/AWS_hackathon_preview.png",
+        youtubeId: "5VkdfzVYFJU",
         tags: ["AWS", "Software Development", "Hackathon finalist"]
     },
     {
