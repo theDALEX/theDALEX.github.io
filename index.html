@@ -6,8 +6,14 @@
 
     <!-- ─── META ─────────────────────────── -->
     <title>Dalex Davis | Computer Science Student & Software Developer</title>
-    <meta name="description" content="Dalex Davis is a Computer Science student at Manchester Metropolitan University building innovative software, mobile apps, and AI-powered tools." />
-    <meta name="keywords" content="Dalex Davis, software developer, computer science, Manchester, mobile app developer, AI, React Native, OpenMarker, DX, Dalex, citynoise" />
+    <meta
+      name="description"
+      content="Dalex Davis is a Computer Science student at Manchester Metropolitan University building innovative software, mobile apps, and AI-powered tools."
+    />
+    <meta
+      name="keywords"
+      content="Dalex Davis, software developer, computer science, Manchester, mobile app developer, AI, React Native, OpenMarker, DX, Dalex, citynoise"
+    />
     <meta name="author" content="Dalex Davis" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://thedalex.github.io" />
@@ -18,50 +24,62 @@
 
     <!-- ─── JSON-LD SCHEMA ───────────────────────── -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://thedalex.github.io/#person",
-          "name": "Dalex Davis",
-          "url": "https://thedalex.github.io",
-          "image": "https://thedalex.github.io/images/DALEXIMG.jpg",
-          "jobTitle": "Software Developer",
-          "description": "Computer Science student at Manchester Metropolitan University building innovative software, mobile apps, and AI-powered tools.",
-          "email": "thedalexdavis@gmail.com",
-          "sameAs": [
-            "https://www.linkedin.com/in/dalexdavis/",
-            "https://github.com/theDALEX",
-            "https://x.com/thedalexdavis",
-            "https://www.instagram.com/iamdalexdavis/"
-          ],
-          "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "Manchester Metropolitan University",
-            "url": "https://www.mmu.ac.uk"
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://thedalex.github.io/#person",
+            "name": "Dalex Davis",
+            "url": "https://thedalex.github.io",
+            "image": "https://thedalex.github.io/images/DALEXIMG.jpg",
+            "jobTitle": "Software Developer",
+            "description": "Computer Science student at Manchester Metropolitan University building innovative software, mobile apps, and AI-powered tools.",
+            "email": "thedalexdavis@gmail.com",
+            "sameAs": [
+              "https://www.linkedin.com/in/dalexdavis/",
+              "https://github.com/theDALEX",
+              "https://x.com/thedalexdavis",
+              "https://www.instagram.com/thedalexdavis/"
+            ],
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Manchester Metropolitan University",
+              "url": "https://www.mmu.ac.uk"
+            },
+            "knowsAbout": [
+              "Software Development",
+              "React Native",
+              "AI",
+              "Computer Science",
+              "Mobile Apps",
+              "Web Development",
+              "Art",
+              "Electron",
+              "Business",
+              "startup",
+              "economics"
+            ]
           },
-          "knowsAbout": ["Software Development", "React Native", "AI", "Computer Science", "Mobile Apps", "Web Development", "Art", "Electron", "Business", "startup", "economics"]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://thedalex.github.io/#website",
-          "url": "https://thedalex.github.io/",
-          "name": "Dalex Davis",
-          "description": "Personal portfolio and software store of Dalex Davis.",
-          "publisher": { "@id": "https://thedalex.github.io/#person" }
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://thedalex.github.io/#webpage",
-          "url": "https://thedalex.github.io/",
-          "name": "Dalex Davis — Computer Science Student & Software Developer",
-          "isPartOf": { "@id": "https://thedalex.github.io/#website" },
-          "about": { "@id": "https://thedalex.github.io/#person" },
-          "description": "Portfolio of Dalex Davis — projects, research, experience, and software releases."
-        }
-      ]
-    }
+          {
+            "@type": "WebSite",
+            "@id": "https://thedalex.github.io/#website",
+            "url": "https://thedalex.github.io/",
+            "name": "Dalex Davis",
+            "description": "Personal portfolio and software store of Dalex Davis.",
+            "publisher": { "@id": "https://thedalex.github.io/#person" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://thedalex.github.io/#webpage",
+            "url": "https://thedalex.github.io/",
+            "name": "Dalex Davis — Computer Science Student & Software Developer",
+            "isPartOf": { "@id": "https://thedalex.github.io/#website" },
+            "about": { "@id": "https://thedalex.github.io/#person" },
+            "description": "Portfolio of Dalex Davis — projects, research, experience, and software releases."
+          }
+        ]
+      }
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -171,7 +189,7 @@
               </svg>
             </a>
             <a
-              href="https://www.instagram.com/iamdalexdavis/"
+              href="https://www.instagram.com/thedalexdavis/"
               target="_blank"
               class="social-icon"
               aria-label="Instagram"
@@ -229,7 +247,7 @@
                   viewCV();
                   return false;
                 "
-                >See my résumé</a
+                >See my resume</a
               >
               <a
                 href="https://github.com/theDALEX"
@@ -247,14 +265,16 @@
       <!-- BUILT & RELEASED -->
       <section class="section" id="releases">
         <p class="section-label">Built &amp; released to the public</p>
-        <h2 class="section-heading">Things I've shipped<br /><em>into the world.</em></h2>
+        <h2 class="section-heading">
+          Things I've shipped<br /><em>into the world.</em>
+        </h2>
 
-         <!-- Software — rendered from store-data.js -->
+        <!-- Software — rendered from store-data.js -->
         <div class="store-list" id="software-grid-home"></div>
         <p class="mt-md">
           <a href="dx-store.html" class="btn-secondary">Visit the DX Store →</a>
         </p>
-        
+
         <!-- Citynoise -->
         <div class="featured-card releases-featured-card">
           <h2 class="featured-title">CITYNOISE</h2>
@@ -266,7 +286,12 @@
             community connections. Citynoise is a larger, evolving project
             developed under my first major long-term goal.
           </p>
-          <a href="https://citynoisepage.vercel.app" target="_blank" class="btn-primary">Visit citynoise →</a>
+          <a
+            href="https://citynoisepage.vercel.app"
+            target="_blank"
+            class="btn-primary"
+            >Visit citynoise →</a
+          >
         </div>
       </section>
 
@@ -397,34 +422,37 @@
       }
 
       // Render software cards on home page from store-data.js
-      document.addEventListener('DOMContentLoaded', function () {
-        const list = document.getElementById('software-grid-home');
-        if (!list || typeof storeData === 'undefined') return;
+      document.addEventListener("DOMContentLoaded", function () {
+        const list = document.getElementById("software-grid-home");
+        if (!list || typeof storeData === "undefined") return;
 
         const platformIcons = {
           windows: `<svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
-          macos:   `<svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20.94c1.5 0 2.75-.67 3.95-1.75C17.5 17.7 18 15.97 18 14c0-3.87-2.69-7-6-7s-6 3.13-6 7c0 1.97.5 3.7 2.05 5.19C9.25 20.27 10.5 20.94 12 20.94z"/><path d="M12 3v4"/></svg>`,
-          linux:   `<svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>`
+          macos: `<svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20.94c1.5 0 2.75-.67 3.95-1.75C17.5 17.7 18 15.97 18 14c0-3.87-2.69-7-6-7s-6 3.13-6 7c0 1.97.5 3.7 2.05 5.19C9.25 20.27 10.5 20.94 12 20.94z"/><path d="M12 3v4"/></svg>`,
+          linux: `<svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>`,
         };
 
         storeData.forEach((app, i) => {
-          const card = document.createElement('div');
-          card.className = 'store-card';
+          const card = document.createElement("div");
+          card.className = "store-card";
           card.style.transitionDelay = `${i * 0.08}s`;
 
-          const dlButtons = app.downloads.map(d => {
-            const icon = platformIcons[d.platform] || '';
-            if (!d.url) return `<span class="store-dl-btn coming-soon">${icon}${d.label} — soon</span>`;
-            return `<a class="store-dl-btn" href="${d.url}" aria-label="Download ${app.name} for ${d.label}">${icon}${d.label}</a>`;
-          }).join('');
+          const dlButtons = app.downloads
+            .map((d) => {
+              const icon = platformIcons[d.platform] || "";
+              if (!d.url)
+                return `<span class="store-dl-btn coming-soon">${icon}${d.label} — soon</span>`;
+              return `<a class="store-dl-btn" href="${d.url}" aria-label="Download ${app.name} for ${d.label}">${icon}${d.label}</a>`;
+            })
+            .join("");
 
           const detailsLink = app.detailsUrl
             ? `<a href="${app.detailsUrl}" class="store-more-link">Full details →</a>`
-            : '';
+            : "";
 
           const bannerHtml = app.logo
             ? `<div class="store-card-banner"><img src="${app.logo}" alt="${app.name} logo"></div>`
-            : `<div class="store-card-banner"><div class="store-banner-icon"><svg width="28" height="28" viewBox="${app.iconViewBox || '0 0 24 24'}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${app.icon}</svg></div></div>`;
+            : `<div class="store-card-banner"><div class="store-banner-icon"><svg width="28" height="28" viewBox="${app.iconViewBox || "0 0 24 24"}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${app.icon}</svg></div></div>`;
 
           card.innerHTML = `
             ${bannerHtml}
@@ -437,7 +465,7 @@
                 </div>
               </div>
               <p class="store-card-desc">${app.description}</p>
-              <div class="store-card-tags">${app.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+              <div class="store-card-tags">${app.tags.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
               <div class="store-card-footer">
                 <div class="store-dl-group">
                   <span class="store-dl-label">Download</span>
@@ -451,10 +479,15 @@
         });
 
         const observer = new IntersectionObserver(
-          entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-          { threshold: 0.08 }
+          (entries) =>
+            entries.forEach((e) => {
+              if (e.isIntersecting) e.target.classList.add("visible");
+            }),
+          { threshold: 0.08 },
         );
-        document.querySelectorAll('#software-grid-home .store-card').forEach(c => observer.observe(c));
+        document
+          .querySelectorAll("#software-grid-home .store-card")
+          .forEach((c) => observer.observe(c));
       });
 
       // Smooth active nav on scroll

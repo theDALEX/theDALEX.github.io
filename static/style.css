@@ -1203,8 +1203,22 @@ body {
 
 /* ─── STORE PAGE ──────────────────────────────── */
 .store-hero {
+    position: relative;
     padding: 4.5rem 0 4rem;
     border-bottom: 1px solid var(--rule);
+}
+
+.store-hero::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+        repeating-linear-gradient(0deg, transparent, transparent 39px, var(--rule) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, var(--rule) 40px);
+    background-size: 40px 40px;
+    opacity: 0.35;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .store-hero-inner {
@@ -1332,8 +1346,8 @@ body {
 }
 
 .store-banner-icon {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
     background: rgba(255, 255, 255, 0.1);
     border: 1.5px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
@@ -1561,8 +1575,8 @@ body {
 }
 
 .store-detail-logo {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     border-radius: 24px;
     background: var(--ink);
     display: flex;
@@ -1574,8 +1588,8 @@ body {
 }
 
 .store-detail-logo img {
-    width: 100%;
-    height: 100%;
+    width: 130%;
+    height: 130%;
     object-fit: contain;
     padding: 1rem;
 }
@@ -1707,8 +1721,8 @@ body {
 
 /* logo image inside banner */
 .store-card-banner img {
-    width: 80px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
     border-radius: 16px;
     position: relative;
