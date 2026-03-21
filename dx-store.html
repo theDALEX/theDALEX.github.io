@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ─── PRIMARY META ─────────────────────────── -->
+    <title>DX's Store | Free Software by Dalex Davis</title>
+    <meta name="description" content="Download free desktop software built by Dalex Davis. OpenMarker automates AI-powered grading and feedback for educators — fully private, runs locally." />
+    <meta name="keywords" content="DX Store, Dalex Davis software, OpenMarker, AI grading tool, free software download, local AI, education software" />
+    <meta name="author" content="Dalex Davis" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://dalexdavis.com/dx-store.html" />
+
+    <!-- ─── FAVICON ───────────────────────────────── -->
+    <link rel="icon" href="/images/DX-LOGO.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/images/DX-LOGO.png" />
+
+    <!-- ─── JSON-LD SCHEMA (updated dynamically by JS too) ─── -->
+    <script type="application/ld+json" id="store-schema">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://thedalex.github.io/dx-store.html#webpage",
+          "url": "https://thedalex.github.io/dx-store.html",
+          "name": "DX Store — Free and Open-source Software by Dalex Davis",
+          "description": "Download free desktop software built by Dalex Davis.",
+          "isPartOf": { "@id": "https://thedalex.github.io/#website" },
+          "author": { "@id": "https://thedalex.github.io/#person" }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav">
+      <a href="/" class="nav-logo">DX</a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/#projects" class="nav-link">Projects</a>
+        <a href="/#experience" class="nav-link">Experience</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- HERO -->
+      <section class="store-hero">
+        <div class="store-hero-inner">
+          <div>
+            <p class="store-eyebrow">Software by Dalex Davis</p>
+            <h1 class="store-title">DX's<br /><em>Store</em></h1>
+            <p class="store-subtitle">Tools I've built and released. Free to download, built to solve real problems.</p>
+          </div>
+          <p class="store-count"><span id="software-count">0</span> release<span id="release-plural"></span> available</p>
+        </div>
+      </section>
+
+      <!-- STORE LIST -->
+      <section class="store-section">
+        <div class="store-list" id="store-list"></div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer" id="contact">
+        <div class="footer-inner">
+          <div>
+            <p class="footer-logo">Dalex <em>Davis</em></p>
+            <p class="footer-tagline">This is my digital book — ideas, experiences, and whatever I'm up to.</p>
+          </div>
+          <div class="footer-links">
+            <a href="mailto:thedalexdavis@gmail.com" class="footer-link">Email</a>
+            <a href="https://www.linkedin.com/in/dalexdavis/" target="_blank" class="footer-link">LinkedIn</a>
+            <a href="https://github.com/theDALEX" target="_blank" class="footer-link">GitHub</a>
+            <a href="https://x.com/thedalexdavis" target="_blank" class="footer-link">X</a>
+          </div>
+        </div>
+        <p class="footer-copy">©<script>document.write(new Date().getFullYear());</script> Dalex Davis</p>
+      </footer>
+    </div>
+
+    <script src="static/store-data.js"></script>
+    <script>
+      const platformIcons = {
+        windows: `<svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
+        macos:   `<svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20.94c1.5 0 2.75-.67 3.95-1.75C17.5 17.7 18 15.97 18 14c0-3.87-2.69-7-6-7s-6 3.13-6 7c0 1.97.5 3.7 2.05 5.19C9.25 20.27 10.5 20.94 12 20.94z"/><path d="M12 3v4"/></svg>`,
+        linux:   `<svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>`
+      };
+
+      function buildBanner(app) {
+        if (app.logo) {
+          return `<div class="store-card-banner"><img src="${app.logo}" alt="${app.name} logo"></div>`;
+        }
+        return `
+          <div class="store-card-banner">
+            <div class="store-banner-icon">
+              <svg width="28" height="28" viewBox="${app.iconViewBox || '0 0 24 24'}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${app.icon}</svg>
+            </div>
+          </div>`;
+      }
+
+      function buildDetailPanel(app) {
+        const logoHtml = app.logo
+          ? `<div class="store-detail-logo"><img src="${app.logo}" alt="${app.name} logo"></div>`
+          : `<div class="store-detail-logo">
+               <svg class="store-detail-logo-icon" width="72" height="72" viewBox="${app.iconViewBox || '0 0 24 24'}" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${app.icon}</svg>
+             </div>`;
+
+        const featuresHtml = app.features && app.features.length
+          ? `<div>
+               <p class="store-detail-section-title">Features</p>
+               <ul class="store-feature-list">
+                 ${app.features.map(f => `<li>${f}</li>`).join('')}
+               </ul>
+             </div>`
+          : '';
+
+        const reqHtml = app.requirements && app.requirements.length
+          ? `<div>
+               <p class="store-detail-section-title">System requirements</p>
+               <ul class="store-req-list">
+                 ${app.requirements.map(r => `<li>${r}</li>`).join('')}
+               </ul>
+             </div>`
+          : '';
+
+        return `
+          <div class="store-detail-panel">
+            <div class="store-detail-inner">
+              ${logoHtml}
+              <div class="store-detail-body">
+                ${app.longDescription ? `<p class="store-detail-desc">${app.longDescription}</p>` : ''}
+                ${featuresHtml}
+                ${reqHtml}
+              </div>
+            </div>
+          </div>`;
+      }
+
+      function renderStore() {
+        const list = document.getElementById('store-list');
+        document.getElementById('software-count').textContent = storeData.length;
+        document.getElementById('release-plural').textContent = storeData.length !== 1 ? 's' : '';
+
+        storeData.forEach((app, i) => {
+          const entry = document.createElement('div');
+          entry.className = 'store-entry';
+
+          const dlButtons = app.downloads.map(d => {
+            const icon = platformIcons[d.platform] || '';
+            return d.url
+              ? `<a class="store-dl-btn" href="${d.url}" aria-label="Download ${app.name} for ${d.label}">${icon}${d.label}</a>`
+              : `<span class="store-dl-btn coming-soon">${icon}${d.label} — soon</span>`;
+          }).join('');
+
+          const githubLink = app.detailsUrl
+            ? `<a href="${app.detailsUrl}" target="_blank" class="store-more-link">GitHub →</a>`
+            : '';
+
+          const card = document.createElement('div');
+          card.className = 'store-card';
+          card.style.transitionDelay = `${i * 0.08}s`;
+          card.innerHTML = `
+            ${buildBanner(app)}
+            <div class="store-card-content">
+              <div class="store-card-header">
+                <h2 class="store-card-name">${app.name}</h2>
+                <div class="store-card-badges">
+                  <span class="store-version-badge">${app.version}</span>
+                  <span class="store-free-badge">${app.price}</span>
+                </div>
+              </div>
+              <p class="store-card-desc">${app.description}</p>
+              <div class="store-card-tags">${app.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+              <div class="store-card-footer">
+                <div class="store-dl-group">
+                  <span class="store-dl-label">Download</span>
+                  ${dlButtons}
+                </div>
+                <div style="display:flex;gap:0.6rem;align-items:center;">
+                  ${githubLink}
+                  <button class="store-toggle-btn" aria-expanded="false" aria-controls="detail-${app.id}">
+                    Details <span class="toggle-arrow">↓</span>
+                  </button>
+                </div>
+              </div>
+            </div>`;
+
+          entry.appendChild(card);
+          entry.insertAdjacentHTML('beforeend', buildDetailPanel(app));
+          entry.querySelector('.store-detail-panel').id = `detail-${app.id}`;
+
+          // Toggle
+          card.querySelector('.store-toggle-btn').addEventListener('click', () => {
+            const isOpen = entry.classList.toggle('open');
+            card.querySelector('.store-toggle-btn').setAttribute('aria-expanded', isOpen);
+          });
+
+          list.appendChild(entry);
+        });
+
+        const observer = new IntersectionObserver(
+          entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+          { threshold: 0.08 }
+        );
+        document.querySelectorAll('.store-card').forEach(c => observer.observe(c));
+      }
+
+      window.addEventListener('scroll', () => {
+        document.querySelector('.nav').classList.toggle('nav-scrolled', window.scrollY > 20);
+      });
+
+      document.addEventListener('DOMContentLoaded', renderStore);
+    </script>
+  </body>
+</html>

@@ -1,40 +1,25 @@
-// Education & Knowledge Base Data
 const educationData = [
     {
-        id: 1,
-        institution: "Manchester Metropolitan University / Science and engineering enrichment  Rise programe",
-        program: "Future Leaders Pathway",
-        date: "2024 - Present",
-        //description: "Part of university learning residency program focused on leadership development and innovation.",
-        type: "program"
-    },
-    {
-        id: 2,
-        institution: "Manchester Metropolitan University",
+        date: "2024 – Present",
         degree: "BSc (Hons) Computer Science",
-        date: "2024 - Present",
-        grade: "First-Class Honours (Year 1)",
-        type: "degree"
-    },
-    {
-        id: 2,
         institution: "Manchester Metropolitan University",
-        degree: "Foundation in Computing and Mathematics",
-        date: "2023 - 2024",
-        grade: "First-Class Honours",
-        logo: "/images/MMU-LOGO.webp",
-        type: "foundation"
+        grade: "In Progress",
+        description: "Studying software engineering, algorithms, AI, and systems design while building real-world projects alongside."
     },
     {
-        id: 4,
-        institution: "Bhartiya Vidya Bhavan's Vidya Mandir",
-        degree: "Higher Secondary Education / Bio-Ip",
-        date: "2020 - 2022",
-        type: "school"
+        date: "2023 – 2024",
+        degree: "Foundation degree",
+        institution: "Manchester Metropolitan University",
+        grade: "Completed",
+        description: "Subjects: Computer Science, Mathematics."
+    },
+    {
+        date: "2020 – 2022",
+        degree: "Higher secondary education",
+        institution: "Bharatiya Vidya Bhavan's",
+        grade: "Completed",
+        description: " BIO-IP,Science & Informatics Practices."
     }
 ];
 
-// Export for use in other files
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = educationData;
-}
+if (typeof module !== 'undefined' && module.exports) module.exports = educationData;

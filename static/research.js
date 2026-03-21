@@ -1,56 +1,39 @@
-// Research Module
-class ResearchManager {
-    constructor() {
-        this.research = researchData;
-    }
+// Research renderer — reads from research-data.js
+document.addEventListener('DOMContentLoaded', function () {
+  const grid = document.querySelector('.research-grid');
+  if (!grid) return;
 
-    init() {
-        this.renderResearch();
-        this.setupAnimations();
-    }
+  grid.innerHTML = '';
 
-    renderResearch() {
-        const grid = document.querySelector('.research-grid');
-        if (!grid) return;
+  researchData.forEach((item, i) => {
+    const el = document.createElement('div');
+    el.className = 'research-item';
+    el.style.transitionDelay = `${i * 0.1}s`;
 
-        grid.innerHTML = '';
-
-        this.research.forEach(item => {
-            const researchElement = this.createResearchElement(item);
-            grid.appendChild(researchElement);
-        });
-    }
-
-    createResearchElement(item) {
-        const div = document.createElement('div');
-        div.className = 'research-item';
-
-        div.innerHTML = `
+    el.innerHTML = `
       <div class="research-card">
-        <div class="research-thumbnail">
-          <img src="${item.thumbnail}" alt="${item.title}" onerror="this.src='/images/default-research.jpg'">
-          <div class="research-type-badge">${item.type.toUpperCase()}</div>
+        <div class="research-thumb">
+          <img src="${item.thumbnail}" alt="${item.title}" loading="lazy" onerror="this.parentElement.style.background='var(--cream)'">
+          <span class="research-type">${item.type.toUpperCase()}</span>
         </div>
-        <div class="research-info">
-          <div class="research-date">${item.date}</div>
+        <div class="research-body">
+          <p class="research-date">${item.date}</p>
           <h4>${item.title}</h4>
           <p>${item.description}</p>
           <div class="research-tags">
-            ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+            ${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}
           </div>
           <div class="research-actions">
             <a href="${item.documentUrl}" target="_blank" class="research-btn view-btn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
               </svg>
               View
             </a>
             <a href="${item.documentUrl}" download class="research-btn download-btn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
               </svg>
               Download
             </a>
@@ -59,37 +42,12 @@ class ResearchManager {
       </div>
     `;
 
-        return div;
-    }
+    grid.appendChild(el);
+  });
 
-    setupAnimations() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe research items
-        const researchItems = document.querySelectorAll('.research-item');
-        researchItems.forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(30px)';
-            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(item);
-        });
-    }
-}
-
-// Initialize on DOM load
-document.addEventListener('DOMContentLoaded', function () {
-    const researchManager = new ResearchManager();
-    researchManager.init();
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('.research-item').forEach(el => observer.observe(el));
 });

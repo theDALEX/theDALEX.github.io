@@ -3,264 +3,378 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/static/style.css" />
-    <title>Dalex Davis</title>
-    <link rel="icon" href="/images/DX-LOGO.png" />
+
+    <!-- ─── META ─────────────────────────── -->
+    <title>Dalex Davis | Computer Science Student & Software Developer</title>
+    <meta name="description" content="Dalex Davis is a Computer Science student at Manchester Metropolitan University building innovative software, mobile apps, and AI-powered tools." />
+    <meta name="keywords" content="Dalex Davis, software developer, computer science, Manchester, mobile app developer, AI, React Native, OpenMarker, DX, Dalex, citynoise" />
+    <meta name="author" content="Dalex Davis" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://thedalex.github.io" />
+
+    <!-- ─── FAVICON ───────────────────────────────── -->
+    <link rel="icon" href="/images/DX-LOGO.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/images/DX-LOGO.png" />
+
+    <!-- ─── JSON-LD SCHEMA ───────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://thedalex.github.io/#person",
+          "name": "Dalex Davis",
+          "url": "https://thedalex.github.io",
+          "image": "https://thedalex.github.io/images/DALEXIMG.jpg",
+          "jobTitle": "Software Developer",
+          "description": "Computer Science student at Manchester Metropolitan University building innovative software, mobile apps, and AI-powered tools.",
+          "email": "thedalexdavis@gmail.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/dalexdavis/",
+            "https://github.com/theDALEX",
+            "https://x.com/thedalexdavis",
+            "https://www.instagram.com/iamdalexdavis/"
+          ],
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Manchester Metropolitan University",
+            "url": "https://www.mmu.ac.uk"
+          },
+          "knowsAbout": ["Software Development", "React Native", "AI", "Computer Science", "Mobile Apps", "Web Development", "Art", "Electron", "Business", "startup", "economics"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://thedalex.github.io/#website",
+          "url": "https://thedalex.github.io/",
+          "name": "Dalex Davis",
+          "description": "Personal portfolio and software store of Dalex Davis.",
+          "publisher": { "@id": "https://thedalex.github.io/#person" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://thedalex.github.io/#webpage",
+          "url": "https://thedalex.github.io/",
+          "name": "Dalex Davis — Computer Science Student & Software Developer",
+          "isPartOf": { "@id": "https://thedalex.github.io/#website" },
+          "about": { "@id": "https://thedalex.github.io/#person" },
+          "description": "Portfolio of Dalex Davis — projects, research, experience, and software releases."
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <!-- Data Files -->
-    <script src="/static/projects-data.js"></script>
-    <script src="/static/research-data.js"></script>
-    <script src="/static/experience-data.js"></script>
-    <script src="/static/education-data.js"></script>
+    <link rel="stylesheet" href="static/style.css" />
+    <!-- Data files -->
+    <script src="static/projects-data.js"></script>
+    <script src="static/research-data.js"></script>
+    <script src="static/experience-data.js"></script>
+    <script src="static/education-data.js"></script>
+    <script src="static/store-data.js"></script>
   </head>
   <body>
-    <div class="gradient-bg"></div>
-    <div class="container">
-      <!-- Hero Section -->
-      <section class="hero">
-        <h1 class="name">Dalex Davis</h1>
-        <p class="tagline">
-          "We can reach heaven not by living a good life and dying, but by
-          creating heaven here on Earth through technology, science and
-          creativity." - DX
-        </p>
+    <!-- NAV -->
+    <nav class="nav">
+      <a href="#" class="nav-logo">DX</a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="dx-store.html" class="nav-link">DX's Store</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
 
-        <!-- Social Icons -->
-        <div class="social-icons">
-          <a
-            href="mailto:thedalexdavis@gmail.com"
-            class="social-icon"
-            aria-label="Email"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-              />
-            </svg>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/dalexdavis/"
-            target="_blank"
-            class="social-icon"
-            aria-label="LinkedIn"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-              />
-            </svg>
-          </a>
-          <a
-            href="https://github.com/theDALEX"
-            target="_blank"
-            class="social-icon"
-            aria-label="GitHub"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-              />
-            </svg>
-          </a>
-          <a
-            href="https://x.com/thedalexdavis"
-            target="_blank"
-            class="social-icon"
-            aria-label="Twitter"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-              />
-            </svg>
-          </a>
-          <a
-            href="https://www.instagram.com/iamdalexdavis/"
-            target="_blank"
-            class="social-icon"
-            aria-label="Instagram"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7zm5.25-.88a1.13 1.13 0 1 1-2.25 0a1.13 1.13 0 0 1 2.25 0z"
-              />
-            </svg>
-          </a>
+    <div class="container">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="hero-inner">
+          <p class="hero-eyebrow">Computer Science · Manchester</p>
+          <h1 class="hero-name">Dalex<br /><em>Davis</em></h1>
+          <p class="hero-quote">
+            "We can reach heaven not by living a good life and dying, but by
+            creating heaven here on Earth through technology, science and
+            creativity."
+            <span class="quote-attr">— DX</span>
+          </p>
+          <div class="social-icons">
+            <a
+              href="mailto:thedalexdavis@gmail.com"
+              class="social-icon"
+              aria-label="Email"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dalexdavis/"
+              target="_blank"
+              class="social-icon"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/theDALEX"
+              target="_blank"
+              class="social-icon"
+              aria-label="GitHub"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://x.com/thedalexdavis"
+              target="_blank"
+              class="social-icon"
+              aria-label="X / Twitter"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/iamdalexdavis/"
+              target="_blank"
+              class="social-icon"
+              aria-label="Instagram"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10A5 5 0 0 1 12 7zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25-.88a1.13 1.13 0 1 1-2.25 0 1.13 1.13 0 0 1 2.25 0z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
-      <!-- About Section -->
-      <section class="about-section">
-        <h2 class="section-title">About me</h2>
-        <div class="about-content">
-          <div class="about-image">
+      <hr class="divider" />
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <p class="section-label">About me</p>
+        <div class="about-grid">
+          <div class="about-image-wrap">
             <img
               src="/images/DALEXIMG.jpg"
               alt="Dalex Davis"
-              class="profile-image"
+              class="profile-img"
             />
           </div>
-          <div class="about-text">
-            <p>
-              I’m a Computer Science student at Manchester Metropolitan
-              University with a passion for building innovative solutions. I’m
-              continuously learning, gaining hands on experience, and refining
+          <div class="about-body">
+            <h2 class="section-heading">
+              Building things that<br /><em>matter.</em>
+            </h2>
+            <p class="about-text">
+              I'm a Computer Science student at Manchester Metropolitan
+              University with a passion for building innovative solutions. I'm
+              continuously learning, gaining hands-on experience, and refining
               my leadership skills, with a strong interest in technology,
               science, and economics.
             </p>
-
-            <p>
+            <p class="about-text">
               My focus is on transforming ideas into scalable software
               solutions. I enjoy tackling complex problems and building systems
-              that create real world impact, while drawing inspiration from art
+              that create real-world impact, while drawing inspiration from art
               and creative thinking.
             </p>
+            <div class="about-actions">
+              <a
+                href="#"
+                class="btn-primary"
+                onclick="
+                  viewCV();
+                  return false;
+                "
+                >See my résumé</a
+              >
+              <a
+                href="https://github.com/theDALEX"
+                target="_blank"
+                class="btn-secondary"
+                >GitHub →</a
+              >
+            </div>
           </div>
         </div>
-
-        <!-- CV Buttons -->
-        <div class="cv-section">
-          <a href="#" class="cv-button" onclick="viewCV()">See my resume</a>
-          <!--<a href="#" class="cv-button cv-button-secondary" onclick="downloadCV()">Download CV</a>-->
-        </div>
       </section>
 
-      <!-- Featured Project -->
-      <section class="featured-project">
-        <h3 class="section-title">Main Projects</h3>
-        <div class="project-card">
-          <h4>CITYNOISE</h4>
-          <p>
-            A platform built for cities and the people who shape them a space to
-            share stories, express identity, and communicate openly. The aim
-            isn’t to replace existing platforms, but to strengthen them by
-            amplifying local voises/noises, celebrating culture, and creating
-            deeper community connections. citynoise is a larger, evolving
-            project. To learn more, explore the dedicated website below. This
-            initiative is developed under my first major project / long term
-            goal.
-          </p>
-          <a
-            href="https://citynoisepage.vercel.app"
-            target="_blank"
-            class="project-link"
-            >Visit citynoise →</a
-          >
-        </div>
-      </section>
+      <hr class="divider" />
 
-      <!-- Projects Showcase -->
-      <section class="projects-showcase">
-        <h3 class="section-title">Projects & Highlights</h3>
-        <p class="section-subtitle">
-          A collection of my work, videos, and creative projects.<br />
-          <span class="section-note"
-            >This is only a selection of my work, See more on my GitHub.</span
-          >
+      <!-- BUILT & RELEASED -->
+      <section class="section" id="releases">
+        <p class="section-label">Built &amp; released to the public</p>
+        <h2 class="section-heading">Things I've shipped<br /><em>into the world.</em></h2>
+
+         <!-- Software — rendered from store-data.js -->
+        <div class="store-list" id="software-grid-home"></div>
+        <p class="mt-md">
+          <a href="dx-store.html" class="btn-secondary">Visit the DX Store →</a>
         </p>
+        
+        <!-- Citynoise -->
+        <div class="featured-card releases-featured-card">
+          <h2 class="featured-title">CITYNOISE</h2>
+          <p class="featured-desc">
+            A platform built for cities and the people who shape them — a space
+            to share stories, express identity, and communicate openly. The aim
+            isn't to replace existing platforms, but to strengthen them by
+            amplifying local voices, celebrating culture, and creating deeper
+            community connections. Citynoise is a larger, evolving project
+            developed under my first major long-term goal.
+          </p>
+          <a href="https://citynoisepage.vercel.app" target="_blank" class="btn-primary">Visit citynoise →</a>
+        </div>
+      </section>
 
-        <!-- Projects Grid - Dynamically populated by projects.js -->
+      <hr class="divider" />
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <p class="section-label">Projects & highlights</p>
+        <h2 class="section-heading">A selection<br /><em>of my work.</em></h2>
+        <p class="section-sub">
+          This is only a selection — see more on my
+          <a
+            href="https://github.com/theDALEX"
+            target="_blank"
+            class="inline-link"
+            >GitHub</a
+          >.
+        </p>
+        <div class="project-nav">
+          <button class="nav-btn active" data-category="all">All</button>
+          <button class="nav-btn" data-category="video">Video</button>
+          <button class="nav-btn" data-category="mobile app">Mobile</button>
+          <button class="nav-btn" data-category="web">Web</button>
+        </div>
         <div class="projects-grid"></div>
       </section>
 
-      <!-- Research Section -->
-      <section class="research-section">
-        <h3 class="section-title">Research & Publications</h3>
-        <p class="section-subtitle">
-          Academic work, technical papers, and research documents.
-        </p>
+      <hr class="divider" />
 
-        <!-- Research Grid - Dynamically populated by research.js -->
+      <!-- RESEARCH -->
+      <section class="section" id="research">
+        <p class="section-label">Research & publications</p>
+        <h2 class="section-heading">Academic work &<br /><em>papers.</em></h2>
         <div class="research-grid"></div>
       </section>
 
-      <!-- Experience Section -->
-      <section class="experience">
-        <h3 class="section-title">Experience</h3>
-        <p class="section-subtitle">
-          My journey building products and solving problems through technology.
-        </p>
+      <hr class="divider" />
 
-        <!-- Timeline - Dynamically populated by experience.js -->
+      <!-- EXPERIENCE -->
+      <section class="section" id="experience">
+        <p class="section-label">Experience</p>
+        <h2 class="section-heading">My journey so<br /><em>far.</em></h2>
         <div class="timeline"></div>
       </section>
 
-      <!-- Education Section -->
-      <section class="education-section">
-        <h3 class="section-title">Knowledge Base</h3>
-        <p class="section-subtitle">
-          An overview of my academic journey, programs, and ongoing learning.
-          This highlights selected items only smaller certificates and short
-          programs aren’t included (Additional certificates on my LinkedIn
-          profile). Learning with new experiences every day.
-        </p>
+      <hr class="divider" />
 
-        <!-- Education List - Dynamically populated by education.js -->
+      <!-- EDUCATION -->
+      <section class="section" id="education">
+        <p class="section-label">Knowledge base</p>
+        <h2 class="section-heading">Academic<br /><em>journey.</em></h2>
+        <p class="section-sub">
+          Selected items only — additional certificates on
+          <a
+            href="https://www.linkedin.com/in/dalexdavis/"
+            target="_blank"
+            class="inline-link"
+            >LinkedIn</a
+          >.
+        </p>
         <div class="education-list"></div>
       </section>
 
-      <div style="text-align: center; padding-bottom: 30px">
-        <div
-          style="
-            display: inline-block;
-            background: white;
-            padding: 16px 16px 20px 16px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            transform: rotate(-2deg);
-            transition: all 0.3s ease;
-          "
-          onmouseover="
-            this.style.transform = 'rotate(0deg) translateY(-10px)';
-            this.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.3)';
-          "
-          onmouseout="
-            this.style.transform = 'rotate(-2deg) translateY(0)';
-            this.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.2)';
-          "
-        >
-          <div
-            style="
-              position: relative;
-              width: 200px;
-              height: 200px;
-              overflow: hidden;
-            "
-          >
-            <img
-              src="/images/longtermvision.jpeg"
-              alt="Long term vision"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-              "
-            />
-          </div>
-          <div
-            style="
-              text-align: center;
-              margin-top: 14px;
-              font-family: &quot;Courier New&quot;, monospace;
-              color: #333;
-              font-size: 14px;
-            "
-          >
-            Long term vision <br />/ My first project
-          </div>
+      <hr class="divider" />
+
+      <!-- VISION PHOTO -->
+      <div class="polaroid-wrap">
+        <div class="polaroid">
+          <img src="/images/longtermvision.jpeg" alt="Long term vision" />
+          <p class="polaroid-label">Long term vision<br />/ My first project</p>
         </div>
       </div>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <p>
-          This is my digital book documenting my ideas, experiences, and
-          whatever I’m up to.
-        </p>
-        <p class="copyright">
+      <!-- FOOTER -->
+      <footer class="footer" id="contact">
+        <div class="footer-inner">
+          <div>
+            <p class="footer-logo">Dalex <em>Davis</em></p>
+            <p class="footer-tagline">
+              This is my digital book — ideas, experiences, and whatever I'm up
+              to.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="mailto:thedalexdavis@gmail.com" class="footer-link"
+              >Email</a
+            >
+            <a
+              href="https://www.linkedin.com/in/dalexdavis/"
+              target="_blank"
+              class="footer-link"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/theDALEX"
+              target="_blank"
+              class="footer-link"
+              >GitHub</a
+            >
+            <a
+              href="https://x.com/thedalexdavis"
+              target="_blank"
+              class="footer-link"
+              >X</a
+            >
+          </div>
+        </div>
+        <p class="footer-copy">
           ©
           <script>
             document.write(new Date().getFullYear());
@@ -269,28 +383,105 @@
         </p>
       </footer>
     </div>
+    <!-- /container -->
 
-    <!-- Modular JavaScript Files -->
-    <script src="/static/interactive-effects.js"></script>
-    <script src="/static/projects.js"></script>
-    <script src="/static/research.js"></script>
-    <script src="/static/experience.js"></script>
-    <script src="/static/education.js"></script>
+    <!-- JS modules -->
+    <script src="static/projects.js"></script>
+    <script src="static/research.js"></script>
+    <script src="static/experience.js"></script>
+    <script src="static/education.js"></script>
 
     <script>
-      // CV Functions
       function viewCV() {
         window.open("/cv_folder/DalexDavis_CV_2026.pdf", "_blank");
       }
 
-      function downloadCV() {
-        const link = document.createElement("a");
-        link.href = "/path/to/your/cv.pdf";
-        link.download = "Dalex_Davis_CV.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
+      // Render software cards on home page from store-data.js
+      document.addEventListener('DOMContentLoaded', function () {
+        const list = document.getElementById('software-grid-home');
+        if (!list || typeof storeData === 'undefined') return;
+
+        const platformIcons = {
+          windows: `<svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
+          macos:   `<svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20.94c1.5 0 2.75-.67 3.95-1.75C17.5 17.7 18 15.97 18 14c0-3.87-2.69-7-6-7s-6 3.13-6 7c0 1.97.5 3.7 2.05 5.19C9.25 20.27 10.5 20.94 12 20.94z"/><path d="M12 3v4"/></svg>`,
+          linux:   `<svg class="platform-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>`
+        };
+
+        storeData.forEach((app, i) => {
+          const card = document.createElement('div');
+          card.className = 'store-card';
+          card.style.transitionDelay = `${i * 0.08}s`;
+
+          const dlButtons = app.downloads.map(d => {
+            const icon = platformIcons[d.platform] || '';
+            if (!d.url) return `<span class="store-dl-btn coming-soon">${icon}${d.label} — soon</span>`;
+            return `<a class="store-dl-btn" href="${d.url}" aria-label="Download ${app.name} for ${d.label}">${icon}${d.label}</a>`;
+          }).join('');
+
+          const detailsLink = app.detailsUrl
+            ? `<a href="${app.detailsUrl}" class="store-more-link">Full details →</a>`
+            : '';
+
+          const bannerHtml = app.logo
+            ? `<div class="store-card-banner"><img src="${app.logo}" alt="${app.name} logo"></div>`
+            : `<div class="store-card-banner"><div class="store-banner-icon"><svg width="28" height="28" viewBox="${app.iconViewBox || '0 0 24 24'}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${app.icon}</svg></div></div>`;
+
+          card.innerHTML = `
+            ${bannerHtml}
+            <div class="store-card-content">
+              <div class="store-card-header">
+                <h2 class="store-card-name">${app.name}</h2>
+                <div class="store-card-badges">
+                  <span class="store-version-badge">${app.version}</span>
+                  <span class="store-free-badge">${app.price}</span>
+                </div>
+              </div>
+              <p class="store-card-desc">${app.description}</p>
+              <div class="store-card-tags">${app.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+              <div class="store-card-footer">
+                <div class="store-dl-group">
+                  <span class="store-dl-label">Download</span>
+                  ${dlButtons}
+                </div>
+                ${detailsLink}
+              </div>
+            </div>
+          `;
+          list.appendChild(card);
+        });
+
+        const observer = new IntersectionObserver(
+          entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+          { threshold: 0.08 }
+        );
+        document.querySelectorAll('#software-grid-home .store-card').forEach(c => observer.observe(c));
+      });
+
+      // Smooth active nav on scroll
+      const sections = document.querySelectorAll("section[id], footer[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              navLinks.forEach((l) => l.classList.remove("active"));
+              const link = document.querySelector(
+                `.nav-link[href="#${e.target.id}"]`,
+              );
+              if (link) link.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.4 },
+      );
+      sections.forEach((s) => observer.observe(s));
+
+      // Nav scroll shadow
+      window.addEventListener("scroll", () => {
+        document
+          .querySelector(".nav")
+          .classList.toggle("nav-scrolled", window.scrollY > 20);
+      });
     </script>
   </body>
 </html>
