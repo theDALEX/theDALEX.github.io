@@ -48,7 +48,18 @@ In testing, OpenMarker showed an average deviation of just 6% compared to human 
 
 The software runs entirely on your local computer using efficient large language models (LLMs), which you can choose based on your hardware. Simply click “Start Marking,” and OpenMarker will assess the work and return a detailed Word document with feedback and grades.
 
-This is version 1 of OpenMarker. The next version will introduce grade balancing tailored to each educator and aims to further reduce the grading deviation more.`,
+This is version 1 of OpenMarker. The next version will introduce grade balancing tailored to each educator and aims to further reduce the grading deviation more.
+
+<strong>Installation & safety note</strong><br>
+OpenMarker is not signed for macOS, Windows, or Linux, so you may see a warning when installing it. It is completely safe, as all processing runs locally.
+
+<strong>How to run</strong>
+<ul>
+  <li><strong>macOS</strong>: Right-click → Open → Confirm</li>
+  <li><strong>Windows</strong>: Click “More info” → “Run anyway” if a SmartScreen warning appears</li>
+  <li><strong>Linux</strong>: Make it executable (<code>chmod +x OpenMarker</code>) and run (<code>./OpenMarker</code>)</li>
+</ul>
+`,
         features: [
             "AI-powered marking using local LLMs",
             "Supports custom marking matrix and criteria",
