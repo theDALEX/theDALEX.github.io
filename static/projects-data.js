@@ -36,6 +36,15 @@ const projectsData = [
         tags: ["React Native", "Expo", "AI"]
     },
     {
+        id: 6,
+        title: "Quantized LLMs on Hugging Face",
+        description: "I've been quantizing and uploading large language models to Hugging Face, making powerful models more accessible by reducing their size without significant quality loss. Check out my collection of quantized models.",
+        category: "web",
+        imageUrl: null,
+        projectUrl: "https://huggingface.co/thedalex",
+        tags: ["LLMs", "Quantization", "AI", "Hugging Face"]
+    },
+    {
         id: 5,
         title: "Projectstormer AI",
         description: "A web platform that sparks creativity and empowers users to generate impactful project ideas. Designed for students and professionals — bridges the gap between brainstorming and execution.",

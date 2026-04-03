@@ -72,14 +72,20 @@ class ProjectsManager {
       `;
     } else {
       // Image-based project
-      div.innerHTML = `
-        <div class="project-content">
-          <div class="project-image">
+      const imageHtml = project.imageUrl
+        ? `<div class="project-image">
             <img src="${project.imageUrl}" alt="${project.title}" onerror="this.style.display='none'">
             <div class="project-overlay">
               <a href="${project.projectUrl}" class="project-link-overlay" target="_blank">View Project</a>
             </div>
-          </div>
+          </div>`
+        : `<div class="project-image" style="display:flex;align-items:center;justify-content:center;background:var(--surface,#f5f5f5);min-height:120px;">
+            <a href="${project.projectUrl}" class="project-link-overlay" target="_blank" style="position:static;opacity:1;padding:0.6rem 1.2rem;background:var(--ink,#111);color:#fff;border-radius:4px;text-decoration:none;font-size:0.85rem;">View on Hugging Face →</a>
+          </div>`;
+
+      div.innerHTML = `
+        <div class="project-content">
+          ${imageHtml}
           <div class="project-info">
             <h4>${project.title}</h4>
             <p>${project.description}</p>
