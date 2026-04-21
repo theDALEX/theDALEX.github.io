@@ -35,13 +35,13 @@ const storeData = [
         icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>`,
         iconViewBox: "0 0 24 24",
         downloads: [
-            { platform: "windows", label: "Windows", url: "https://github.com/theDALEX/openmarker/releases/download/v1.0.1/OpenMarker.Setup.1.0.1.exe" },
-            { platform: "macos", label: "macOS", url: "https://github.com/theDALEX/openmarker/releases/download/v1.0.1/OpenMarker-1.0.1-arm64.dmg" },
-            { platform: "linux", label: "Linux", url: "https://github.com/theDALEX/openmarker/releases/download/v1.0.1/OpenMarker-1.0.1.AppImage" }
+            { platform: "windows", label: "Windows", url: "https://github.com/dalexdavis/openmarker/releases/download/v1.0.1/OpenMarker.Setup.1.0.1.exe" },
+            { platform: "macos", label: "macOS", url: "https://github.com/dalexdavis/openmarker/releases/download/v1.0.1/OpenMarker-1.0.1-arm64.dmg" },
+            { platform: "linux", label: "Linux", url: "https://github.com/dalexdavis/openmarker/releases/download/v1.0.1/OpenMarker-1.0.1.AppImage" }
 
 
         ],
-        detailsUrl: "https://github.com/theDALEX/OpenMarker",
+        detailsUrl: "https://github.com/dalexdavis/OpenMarker",
         longDescription: `OpenMarker is an AI-powered grading assistant designed for teachers and lecturers. It automatically evaluates essays and reports, allowing you to spend more time teaching and engaging with students.
 
 In testing, OpenMarker showed an average deviation of just 6% compared to human grading, making it a reliable tool that can save you hours of marking each week.
