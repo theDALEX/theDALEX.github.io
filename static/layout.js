@@ -9,7 +9,7 @@ const sharedLayoutConfig = {
     { label: "Contact", href: "/#contact", section: "contact" },
   ],
   footerLinks: [
-    { label: "Email", href: "mailto:thedalexdavis@gmail.com" },
+    { label: "Email", href: "mailto:dxsecondarymail@gmail.com" },
     {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/dalexdavis/",
